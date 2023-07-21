@@ -56,5 +56,5 @@ function part2() {
     return horizontal * depth
 }
 
-console.log(part1())
-console.log(part2())
+console.log( part1() )
+console.log( part2() )
