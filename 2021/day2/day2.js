@@ -1,6 +1,6 @@
 function getData() {
     const fs = require("fs")
-    
+
     return fs
         .readFileSync("inputs.txt", "utf-8")
         .split("\n")
@@ -56,5 +56,5 @@ function part2() {
     return horizontal * depth
 }
 
-console.log( part1() )
-console.log( part2() )
+console.log(part1())
+console.log(part2())
