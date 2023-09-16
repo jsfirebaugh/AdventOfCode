@@ -7,28 +7,28 @@ component {
             : "./Inputs/Day2.txt"
 
         var PlayValues = {
-            "X" = 1,
-            "Y" = 2,
-            "Z" = 3
+            "X" = 1, // Rock
+            "Y" = 2, // Paper
+            "Z" = 3  // Scissors
         }
 
         var OutcomeValues = {
-            "A" : {
-                "X" : 3,
-                "Y" : 6,
-                "Z" : 0
+            "A" : {             // They Play Rock
+                "X" : 3,        // You Play Rock        -- Tie
+                "Y" : 6,        // You Play Paper       -- Win
+                "Z" : 0         // You Play Scissors    -- Lose
             },
 
-            "B" : {
-                "X" : 0,
-                "Y" : 3,
-                "Z" : 6
+            "B" : {             // They Play Paper
+                "X" : 0,        // You Play Rock        -- Lose
+                "Y" : 3,        // You Play Paper       -- Tie
+                "Z" : 6         // You Play Scissors    -- Win
             },
 
-            "C" : {
-                "X" : 6,
-                "Y" : 0,
-                "Z" : 3
+            "C" : {             // They Play Scissors
+                "X" : 6,        // You Play Rock        -- Win
+                "Y" : 0,        // You Play Paper       -- Lose
+                "Z" : 3         // You Play Scissors    -- Tie
             }
         }
 
