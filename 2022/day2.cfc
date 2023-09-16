@@ -45,4 +45,47 @@ component {
 
     }
 
+    public function Part2( boolean UseSample = false){
+        var FilePath = Arguments.UseSample 
+            ? "./Inputs/Day2_Sample.txt"
+            : "./Inputs/Day2.txt"
+
+        var OutcomeValues = {
+            "X" : 0,    // Lose
+            "Y" : 3,    // Draw
+            "Z" : 6     // Win
+        }
+
+        var PlayValues = {
+            "X" : {         // You need to lose
+                "A" : 3,    // Them Rock     // You Scissors
+                "B" : 1,    // Them Paper    // You Rock
+                "C" : 2     // Them Scissors // You Paper
+            }, 
+            
+            "Y" : {         // You need to draw
+                "A" : 1,    // Them Rock     // You Rock
+                "B" : 2,    // Them Paper    // You Paper
+                "C" : 3     // Them Scissors // You Scissors
+            },
+
+            "Z" : {         // You need to win
+                "A" : 2,    // Them Rock     // You Paper
+                "B" : 3,    // Them Paper    // You Scissors
+                "C" : 1     // Them Scissors // You Rock
+            }
+        }
+
+        var GamePlayScore = FileRead(FilePath)
+            .ListToArray(chr(10))
+            .Map((input) => {
+                var ThisRoundOutcome = OutcomeValues.Find(input[3])
+                var MyPlayBonus = PlayValues.Find(input[3]).Find(input[1])
+                return ThisRoundOutcome + MyPlayBonus
+            })
+            .Sum()
+
+        print.line(GamePlayScore)
+    }
+
 }
