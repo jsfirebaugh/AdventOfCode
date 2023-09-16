@@ -7,9 +7,9 @@ component {
             : "./Inputs/Day2.txt"
 
         var PlayValues = {
-            "X" = 1, // Rock
-            "Y" = 2, // Paper
-            "Z" = 3  // Scissors
+            "X" : 1, // Rock
+            "Y" : 2, // Paper
+            "Z" : 3  // Scissors
         }
 
         var OutcomeValues = {
