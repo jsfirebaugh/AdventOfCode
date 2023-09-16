@@ -1,6 +1,6 @@
 component {
 
-    public function part1( boolean UseSample = false ){
+    public function Part1( boolean UseSample = false ){
 
         var FilePath = Arguments.UseSample 
             ? "./Inputs/Day2_Sample.txt"
@@ -35,11 +35,11 @@ component {
         var GamePlayScore = FileRead(FilePath)
             .ListToArray(chr(10))
             .Map((input) => {
-                var ThisRoundOutcome = OutcomeValues.find(input[1]).find(input[3])
-                var MyPlayBonus = PlayValues.find(input[3])
+                var ThisRoundOutcome = OutcomeValues.Find(input[1]).Find(input[3])
+                var MyPlayBonus = PlayValues.Find(input[3])
                 return ThisRoundOutcome + MyPlayBonus
             })
-            .sum()
+            .Sum()
 
         print.line(GamePlayScore)
 
