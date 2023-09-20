@@ -6,8 +6,6 @@ component {
             ? "./Inputs/Day4_Sample.txt"
             : "./Inputs/Day4.txt"
 
-        var OverlapCount = 0
-
         var TheInput = FileRead( FilePath )
             .ListToArray(chr(10))
             .Map((item) => {
