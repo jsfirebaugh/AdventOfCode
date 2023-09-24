@@ -114,7 +114,7 @@ component {
         print.line( MaxScenicCount )
     }
 
-    private function CountScenicForArray( required Array TreeArray, required Numeric TreeHeight ){
+    private numeric function CountScenicForArray( required Array TreeArray, required Numeric TreeHeight ){
         
         var ScenicCount = 0
         
